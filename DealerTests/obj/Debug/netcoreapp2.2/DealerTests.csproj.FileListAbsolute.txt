@@ -1,0 +1,17 @@
+/Users/helena.franczak/RiderProjects/BlackJack/DealerTests/bin/Debug/netcoreapp2.2/NUnit3.TestAdapter.dll
+/Users/helena.franczak/RiderProjects/BlackJack/DealerTests/bin/Debug/netcoreapp2.2/NUnit3.TestAdapter.pdb
+/Users/helena.franczak/RiderProjects/BlackJack/DealerTests/bin/Debug/netcoreapp2.2/nunit.engine.netstandard.dll
+/Users/helena.franczak/RiderProjects/BlackJack/DealerTests/bin/Debug/netcoreapp2.2/DealerTests.deps.json
+/Users/helena.franczak/RiderProjects/BlackJack/DealerTests/bin/Debug/netcoreapp2.2/DealerTests.runtimeconfig.json
+/Users/helena.franczak/RiderProjects/BlackJack/DealerTests/bin/Debug/netcoreapp2.2/DealerTests.runtimeconfig.dev.json
+/Users/helena.franczak/RiderProjects/BlackJack/DealerTests/bin/Debug/netcoreapp2.2/DealerTests.dll
+/Users/helena.franczak/RiderProjects/BlackJack/DealerTests/bin/Debug/netcoreapp2.2/DealerTests.pdb
+/Users/helena.franczak/RiderProjects/BlackJack/DealerTests/bin/Debug/netcoreapp2.2/BlackJack.dll
+/Users/helena.franczak/RiderProjects/BlackJack/DealerTests/bin/Debug/netcoreapp2.2/BlackJack.pdb
+/Users/helena.franczak/RiderProjects/BlackJack/DealerTests/obj/Debug/netcoreapp2.2/DealerTests.csprojAssemblyReference.cache
+/Users/helena.franczak/RiderProjects/BlackJack/DealerTests/obj/Debug/netcoreapp2.2/DealerTests.csproj.CoreCompileInputs.cache
+/Users/helena.franczak/RiderProjects/BlackJack/DealerTests/obj/Debug/netcoreapp2.2/DealerTests.AssemblyInfoInputs.cache
+/Users/helena.franczak/RiderProjects/BlackJack/DealerTests/obj/Debug/netcoreapp2.2/DealerTests.AssemblyInfo.cs
+/Users/helena.franczak/RiderProjects/BlackJack/DealerTests/obj/Debug/netcoreapp2.2/DealerTests.csproj.CopyComplete
+/Users/helena.franczak/RiderProjects/BlackJack/DealerTests/obj/Debug/netcoreapp2.2/DealerTests.dll
+/Users/helena.franczak/RiderProjects/BlackJack/DealerTests/obj/Debug/netcoreapp2.2/DealerTests.pdb

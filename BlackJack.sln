@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlackJack", "BlackJack\BlackJack.csproj", "{0CA2FF1B-A7D4-4C69-88BE-B40587280FE2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DealerTests", "DealerTests\DealerTests.csproj", "{2FF3C1A7-90F5-442F-8156-711FB869BC86}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0CA2FF1B-A7D4-4C69-88BE-B40587280FE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CA2FF1B-A7D4-4C69-88BE-B40587280FE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CA2FF1B-A7D4-4C69-88BE-B40587280FE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CA2FF1B-A7D4-4C69-88BE-B40587280FE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FF3C1A7-90F5-442F-8156-711FB869BC86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FF3C1A7-90F5-442F-8156-711FB869BC86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FF3C1A7-90F5-442F-8156-711FB869BC86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FF3C1A7-90F5-442F-8156-711FB869BC86}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
