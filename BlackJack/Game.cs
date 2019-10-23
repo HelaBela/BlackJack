@@ -7,48 +7,36 @@ namespace BlackJack
     public class Game
     {
         private Deck _deck;
-
         private Player _player;
-
         private IConsoleOperations _consoleOperations;
-        private List<CardNumber> _cardsNumbersAtHand;
-        private int Total;
+        private List<CardNumber> _cardNumbersAtHand;
+       
 
         public Game(Player player, IConsoleOperations consoleOperations, Deck deck)
         {
             _deck = deck;
             _player = player;
             _consoleOperations = consoleOperations;
-            _cardsNumbersAtHand = new List<CardNumber>();
+            _cardNumbersAtHand = new List<CardNumber>();
         }
 
         public void Start()
         {
             ShowTwoCards();
-            _player.Play(_cardsNumbersAtHand);
-            
-            
-           
-            
-            
-            
-            
-            
-            _consoleOperations.Write($"your score is {Total} Hit = 1, Stay = 0");
+           var playerMove = _player.Play(_cardNumbersAtHand);
 
-            while (_consoleOperations.Read() == "1")
-            {
-                var nextCard = _deck.TakeCard();
-                _cardsNumbersAtHand.Add(nextCard.CardNumber);
-                _consoleOperations.Write(nextCard.CardNumber + " " + nextCard.Suit);
+           while (playerMove == "Play")
+           {
+               var nextCard = _deck.TakeCard();
+               _cardNumbersAtHand.Add(nextCard.CardNumber);
+               _consoleOperations.Write(nextCard.CardNumber + " " + nextCard.Suit);
+               playerMove = _player.Play(_cardNumbersAtHand);
+           }
 
-                _consoleOperations.Write($"your score is {Total} Hit = 1, Stay = 0");
-            }
-
-            if (_consoleOperations.Read() == "0")
-            {
-                _consoleOperations.Write($"your final score is {Total}. Now the dealer plays");
-            }
+           if (playerMove == "Done")
+           {
+               
+           }
         }
 
         public void ShowTwoCards()
@@ -58,61 +46,29 @@ namespace BlackJack
             foreach (var card in twoCards)
             {
                 _consoleOperations.Write(card.CardNumber + " " + card.Suit);
-                _cardsNumbersAtHand.Add(card.CardNumber);
+                _cardNumbersAtHand.Add(card.CardNumber);
             }
         }
         
         
         
-        
-        
-        
-        
-        
 
-        
-        
-        
-        
-        
-        
-        
-
-//        public string HitOrStay()
+//        public void boo()
 //        {
-//            while (_consoleOperations.Read() != "1" || _consoleOperations.Read() != "0")
+//            if (Total == 21)
 //            {
-//                if (_consoleOperations.Read() == "1")
-//                {
-//                    return "hit";
-//                }
-//
-//                if (_consoleOperations.Read() == "0")
-//                {
-//                    return "stay";
-//                }
+//                _consoleOperations.Write("The player won!");
 //            }
 //
-//            return "again";
+//            if (Total > 21)
+//            {
+//                _consoleOperations.Write("It is a burst. The Dealer won!");
+//            }
+//
+//            if (Total < 21)
+//            {
+//                _deck = new Deck();
+//            }
 //        }
-
-
-        public void boo()
-        {
-            if (Total == 21)
-            {
-                _consoleOperations.Write("The player won!");
-            }
-
-            if (Total > 21)
-            {
-                _consoleOperations.Write("It is a burst. The Dealer won!");
-            }
-
-            if (Total < 21)
-            {
-                _deck = new Deck();
-            }
-        }
     }
 }
