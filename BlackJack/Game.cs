@@ -11,6 +11,7 @@ namespace BlackJack
         private Player _player;
 
         private IConsoleOperations _consoleOperations;
+        private List<CardNumber> _cardsNumbersAtHand;
         private int Total;
 
         public Game(Player player, IConsoleOperations consoleOperations, Deck deck)
@@ -18,30 +19,83 @@ namespace BlackJack
             _deck = deck;
             _player = player;
             _consoleOperations = consoleOperations;
+            _cardsNumbersAtHand = new List<CardNumber>();
         }
 
-        public void Play()
+        public void Start()
+        {
+            ShowTwoCards();
+            _player.Play(_cardsNumbersAtHand);
+            
+            
+           
+            
+            
+            
+            
+            
+            _consoleOperations.Write($"your score is {Total} Hit = 1, Stay = 0");
+
+            while (_consoleOperations.Read() == "1")
+            {
+                var nextCard = _deck.TakeCard();
+                _cardsNumbersAtHand.Add(nextCard.CardNumber);
+                _consoleOperations.Write(nextCard.CardNumber + " " + nextCard.Suit);
+
+                _consoleOperations.Write($"your score is {Total} Hit = 1, Stay = 0");
+            }
+
+            if (_consoleOperations.Read() == "0")
+            {
+                _consoleOperations.Write($"your final score is {Total}. Now the dealer plays");
+            }
+        }
+
+        public void ShowTwoCards()
         {
             var twoCards = _deck.TakeTwoCards();
-            
+
             foreach (var card in twoCards)
             {
                 _consoleOperations.Write(card.CardNumber + " " + card.Suit);
-                _player.cardsNumbersAtHand.Add(card.CardNumber);
-            }
-
-            _consoleOperations.Write($"your score is {_player.Total} Hit = 1, Stay = 0");
-
-             while (_player.HitOrStay())
-            {
-                var nextCard = _deck.TakeCard();
-                _player.cardsNumbersAtHand.Add(nextCard.CardNumber);
-                _consoleOperations.Write(nextCard.CardNumber + " " + nextCard.Suit);
-
+                _cardsNumbersAtHand.Add(card.CardNumber);
             }
         }
+        
+        
+        
+        
+        
+        
+        
+        
 
-     
+        
+        
+        
+        
+        
+        
+        
+
+//        public string HitOrStay()
+//        {
+//            while (_consoleOperations.Read() != "1" || _consoleOperations.Read() != "0")
+//            {
+//                if (_consoleOperations.Read() == "1")
+//                {
+//                    return "hit";
+//                }
+//
+//                if (_consoleOperations.Read() == "0")
+//                {
+//                    return "stay";
+//                }
+//            }
+//
+//            return "again";
+//        }
+
 
         public void boo()
         {
@@ -60,7 +114,5 @@ namespace BlackJack
                 _deck = new Deck();
             }
         }
-
-      
     }
 }

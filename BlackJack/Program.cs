@@ -12,12 +12,11 @@ namespace BlackJack
             var consoleOperations = new ConsoleOperations();
             var player = new Player(consoleOperations);
             var deck = new Deck();
-            //var card = new Card();
-            var cardNumbersAtHand = new List<CardNumber>();
+           
             
             var game = new Game(player, consoleOperations, deck);
 
-         game.Play();
+         game.Start();
            
        
 

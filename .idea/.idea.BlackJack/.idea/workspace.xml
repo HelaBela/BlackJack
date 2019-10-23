@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="88495bec-1c1f-4733-a4bc-e272932ba16a" name="Default Changelist" comment="" />
+    <list default="true" id="88495bec-1c1f-4733-a4bc-e272932ba16a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/BlackJack/Game.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BlackJack/Game.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlackJack/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BlackJack/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlackJack/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BlackJack/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlackJack/bin/Debug/netcoreapp2.2/BlackJack.dll" beforeDir="false" afterPath="$PROJECT_DIR$/BlackJack/bin/Debug/netcoreapp2.2/BlackJack.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlackJack/bin/Debug/netcoreapp2.2/BlackJack.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/BlackJack/bin/Debug/netcoreapp2.2/BlackJack.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlackJack/obj/Debug/netcoreapp2.2/BlackJack.dll" beforeDir="false" afterPath="$PROJECT_DIR$/BlackJack/obj/Debug/netcoreapp2.2/BlackJack.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlackJack/obj/Debug/netcoreapp2.2/BlackJack.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/BlackJack/obj/Debug/netcoreapp2.2/BlackJack.pdb" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,60 +21,60 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BlackJack/Program.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="7" lean-forward="true" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
+            <state relative-caret-position="210">
+              <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
               <folding>
-                <marker date="1571723679661" expanded="true" signature="6:47" ph="..." />
-                <marker date="1571723679661" expanded="true" signature="68:741" ph="{...}" />
-                <marker date="1571723679661" expanded="true" signature="88:739" ph="{...}" />
-                <marker date="1571723679661" expanded="true" signature="134:733" ph="{...}" />
-                <marker date="1571723679661" expanded="true" signature="543:722" ph="/* var playerHand = game.Play(); ... */" />
+                <marker date="1571789415025" expanded="true" signature="6:47" ph="..." />
+                <marker date="1571789415025" expanded="true" signature="68:657" ph="{...}" />
+                <marker date="1571789415025" expanded="true" signature="88:655" ph="{...}" />
+                <marker date="1571789415025" expanded="true" signature="134:649" ph="{...}" />
+                <marker date="1571789415025" expanded="true" signature="459:638" ph="/* var playerHand = game.Play(); ... */" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/BlackJack/Player.cs">
+        <entry file="file://$PROJECT_DIR$/BlackJack/Game.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="52" column="46" lean-forward="true" selection-start-line="52" selection-start-column="46" selection-end-line="52" selection-end-column="46" />
+            <state relative-caret-position="510">
+              <caret line="36" column="81" lean-forward="true" selection-start-line="36" selection-start-column="10" selection-end-line="36" selection-end-column="81" />
               <folding>
-                <marker date="1571723917663" expanded="true" signature="6:47" ph="..." />
-                <marker date="1571723917663" expanded="true" signature="68:1764" ph="{...}" />
-                <marker date="1571723917663" expanded="true" signature="94:1762" ph="{...}" />
-                <marker date="1571723917663" expanded="true" signature="307:449" ph="{...}" />
-                <marker date="1571723917663" expanded="true" signature="521:1241" ph="{...}" />
-                <marker date="1571723917663" expanded="true" signature="617:1204" ph="{...}" />
-                <marker date="1571723917663" expanded="true" signature="681:861" ph="{...}" />
-                <marker date="1571723917663" expanded="true" signature="1009:1078" ph="{...}" />
-                <marker date="1571723917663" expanded="true" signature="1099:1190" ph="{...}" />
-                <marker date="1571723917663" expanded="true" signature="1274:1756" ph="{...}" />
-                <marker date="1571723917663" expanded="true" signature="1370:1467" ph="{...}" />
-                <marker date="1571723917663" expanded="true" signature="1518:1575" ph="{...}" />
-                <marker date="1571723917663" expanded="true" signature="1593:1746" ph="{...}" />
+                <marker date="1571789852299" expanded="false" signature="6:66" ph="..." />
+                <marker date="1571789852299" expanded="true" signature="87:2768" ph="{...}" />
+                <marker date="1571789852299" expanded="true" signature="111:2766" ph="{...}" />
+                <marker date="1571789852299" expanded="true" signature="400:586" ph="{...}" />
+                <marker date="1571789852299" expanded="true" signature="615:1435" ph="{...}" />
+                <marker date="1571789852299" expanded="true" signature="939:1250" ph="{...}" />
+                <marker date="1571789852299" expanded="true" signature="1301:1425" ph="{...}" />
+                <marker date="1571789852299" expanded="true" signature="1471:1747" ph="{...}" />
+                <marker date="1571789852299" expanded="true" signature="1574:1737" ph="{...}" />
+                <marker date="1571789852299" expanded="true" signature="1885:2368" ph="/* public string HitOrStay() ... */" />
+                <marker date="1571789852299" expanded="true" signature="2396:2760" ph="{...}" />
+                <marker date="1571789852299" expanded="true" signature="2435:2524" ph="{...}" />
+                <marker date="1571789852299" expanded="true" signature="2553:2657" ph="{...}" />
+                <marker date="1571789852299" expanded="true" signature="2686:2750" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BlackJack/Game.cs">
+        <entry file="file://$PROJECT_DIR$/BlackJack/Player.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
+            <state relative-caret-position="330">
+              <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
               <folding>
-                <marker date="1571723917666" expanded="false" signature="6:66" ph="..." />
-                <marker date="1571723917666" expanded="true" signature="87:1576" ph="{...}" />
-                <marker date="1571723917666" expanded="true" signature="111:1574" ph="{...}" />
-                <marker date="1571723917666" expanded="true" signature="346:474" ph="{...}" />
-                <marker date="1571723917666" expanded="true" signature="502:1162" ph="{...}" />
-                <marker date="1571723917666" expanded="true" signature="617:787" ph="{...}" />
-                <marker date="1571723917666" expanded="true" signature="920:1152" ph="{...}" />
-                <marker date="1571723917666" expanded="true" signature="1196:1560" ph="{...}" />
-                <marker date="1571723917666" expanded="true" signature="1235:1324" ph="{...}" />
-                <marker date="1571723917666" expanded="true" signature="1353:1457" ph="{...}" />
-                <marker date="1571723917666" expanded="true" signature="1486:1550" ph="{...}" />
+                <marker date="1571789852296" expanded="true" signature="6:47" ph="..." />
+                <marker date="1571789852296" expanded="true" signature="68:1297" ph="{...}" />
+                <marker date="1571789852296" expanded="true" signature="94:1295" ph="{...}" />
+                <marker date="1571789852296" expanded="true" signature="270:343" ph="{...}" />
+                <marker date="1571789852296" expanded="true" signature="399:540" ph="{...}" />
+                <marker date="1571789852296" expanded="true" signature="628:1287" ph="{...}" />
+                <marker date="1571789852296" expanded="true" signature="690:1277" ph="{...}" />
+                <marker date="1571789852296" expanded="true" signature="754:934" ph="{...}" />
+                <marker date="1571789852296" expanded="true" signature="1082:1151" ph="{...}" />
+                <marker date="1571789852296" expanded="true" signature="1172:1263" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -176,6 +184,9 @@
       </file>
     </leaf>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/BlackJack/CardsDeck/Deck.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BlackJack/ConsoleOperations/IConsoleOperations.cs" root0="FORCE_HIGHLIGHTING" />
@@ -210,12 +221,20 @@
       </list>
     </option>
   </component>
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/.idea.BlackJack/.idea/vcs.xml" />
+      </list>
+    </option>
+  </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="65" />
-    <option name="y" value="-1411" />
-    <option name="width" value="1952" />
+    <option name="x" value="-25" />
+    <option name="y" value="-1417" />
+    <option name="width" value="1409" />
     <option name="height" value="1308" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="SolutionExplorer" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -315,12 +334,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1571631735226</updated>
-      <workItem from="1571631736566" duration="28950000" />
+      <workItem from="1571631736566" duration="33249000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28950000" />
+    <option name="totallyTimeSpent" value="33249000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -332,10 +351,11 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-1411" width="1952" height="1308" extended-state="0" />
+    <frame x="-25" y="-1417" width="1409" height="1308" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21413612" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29919532" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="NuGet" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
@@ -347,7 +367,7 @@
       <window_info anchor="bottom" id="Build" weight="0.32730263" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32401314" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.19572368" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.20641448" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -498,56 +518,56 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BlackJack/Program.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="7" lean-forward="true" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
+        <state relative-caret-position="210">
+          <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
           <folding>
-            <marker date="1571723679661" expanded="true" signature="6:47" ph="..." />
-            <marker date="1571723679661" expanded="true" signature="68:741" ph="{...}" />
-            <marker date="1571723679661" expanded="true" signature="88:739" ph="{...}" />
-            <marker date="1571723679661" expanded="true" signature="134:733" ph="{...}" />
-            <marker date="1571723679661" expanded="true" signature="543:722" ph="/* var playerHand = game.Play(); ... */" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BlackJack/Game.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
-          <folding>
-            <marker date="1571723917666" expanded="false" signature="6:66" ph="..." />
-            <marker date="1571723917666" expanded="true" signature="87:1576" ph="{...}" />
-            <marker date="1571723917666" expanded="true" signature="111:1574" ph="{...}" />
-            <marker date="1571723917666" expanded="true" signature="346:474" ph="{...}" />
-            <marker date="1571723917666" expanded="true" signature="502:1162" ph="{...}" />
-            <marker date="1571723917666" expanded="true" signature="617:787" ph="{...}" />
-            <marker date="1571723917666" expanded="true" signature="920:1152" ph="{...}" />
-            <marker date="1571723917666" expanded="true" signature="1196:1560" ph="{...}" />
-            <marker date="1571723917666" expanded="true" signature="1235:1324" ph="{...}" />
-            <marker date="1571723917666" expanded="true" signature="1353:1457" ph="{...}" />
-            <marker date="1571723917666" expanded="true" signature="1486:1550" ph="{...}" />
+            <marker date="1571789415025" expanded="true" signature="6:47" ph="..." />
+            <marker date="1571789415025" expanded="true" signature="68:657" ph="{...}" />
+            <marker date="1571789415025" expanded="true" signature="88:655" ph="{...}" />
+            <marker date="1571789415025" expanded="true" signature="134:649" ph="{...}" />
+            <marker date="1571789415025" expanded="true" signature="459:638" ph="/* var playerHand = game.Play(); ... */" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BlackJack/Player.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="52" column="46" lean-forward="true" selection-start-line="52" selection-start-column="46" selection-end-line="52" selection-end-column="46" />
+        <state relative-caret-position="330">
+          <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
           <folding>
-            <marker date="1571723917663" expanded="true" signature="6:47" ph="..." />
-            <marker date="1571723917663" expanded="true" signature="68:1764" ph="{...}" />
-            <marker date="1571723917663" expanded="true" signature="94:1762" ph="{...}" />
-            <marker date="1571723917663" expanded="true" signature="307:449" ph="{...}" />
-            <marker date="1571723917663" expanded="true" signature="521:1241" ph="{...}" />
-            <marker date="1571723917663" expanded="true" signature="617:1204" ph="{...}" />
-            <marker date="1571723917663" expanded="true" signature="681:861" ph="{...}" />
-            <marker date="1571723917663" expanded="true" signature="1009:1078" ph="{...}" />
-            <marker date="1571723917663" expanded="true" signature="1099:1190" ph="{...}" />
-            <marker date="1571723917663" expanded="true" signature="1274:1756" ph="{...}" />
-            <marker date="1571723917663" expanded="true" signature="1370:1467" ph="{...}" />
-            <marker date="1571723917663" expanded="true" signature="1518:1575" ph="{...}" />
-            <marker date="1571723917663" expanded="true" signature="1593:1746" ph="{...}" />
+            <marker date="1571789852296" expanded="true" signature="6:47" ph="..." />
+            <marker date="1571789852296" expanded="true" signature="68:1297" ph="{...}" />
+            <marker date="1571789852296" expanded="true" signature="94:1295" ph="{...}" />
+            <marker date="1571789852296" expanded="true" signature="270:343" ph="{...}" />
+            <marker date="1571789852296" expanded="true" signature="399:540" ph="{...}" />
+            <marker date="1571789852296" expanded="true" signature="628:1287" ph="{...}" />
+            <marker date="1571789852296" expanded="true" signature="690:1277" ph="{...}" />
+            <marker date="1571789852296" expanded="true" signature="754:934" ph="{...}" />
+            <marker date="1571789852296" expanded="true" signature="1082:1151" ph="{...}" />
+            <marker date="1571789852296" expanded="true" signature="1172:1263" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BlackJack/Game.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="36" column="81" lean-forward="true" selection-start-line="36" selection-start-column="10" selection-end-line="36" selection-end-column="81" />
+          <folding>
+            <marker date="1571789852299" expanded="false" signature="6:66" ph="..." />
+            <marker date="1571789852299" expanded="true" signature="87:2768" ph="{...}" />
+            <marker date="1571789852299" expanded="true" signature="111:2766" ph="{...}" />
+            <marker date="1571789852299" expanded="true" signature="400:586" ph="{...}" />
+            <marker date="1571789852299" expanded="true" signature="615:1435" ph="{...}" />
+            <marker date="1571789852299" expanded="true" signature="939:1250" ph="{...}" />
+            <marker date="1571789852299" expanded="true" signature="1301:1425" ph="{...}" />
+            <marker date="1571789852299" expanded="true" signature="1471:1747" ph="{...}" />
+            <marker date="1571789852299" expanded="true" signature="1574:1737" ph="{...}" />
+            <marker date="1571789852299" expanded="true" signature="1885:2368" ph="/* public string HitOrStay() ... */" />
+            <marker date="1571789852299" expanded="true" signature="2396:2760" ph="{...}" />
+            <marker date="1571789852299" expanded="true" signature="2435:2524" ph="{...}" />
+            <marker date="1571789852299" expanded="true" signature="2553:2657" ph="{...}" />
+            <marker date="1571789852299" expanded="true" signature="2686:2750" ph="{...}" />
           </folding>
         </state>
       </provider>
