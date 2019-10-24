@@ -1,0 +1,17 @@
+/Users/helena.franczak/RiderProjects/BlackJack/GameTests/bin/Debug/netcoreapp2.2/NUnit3.TestAdapter.dll
+/Users/helena.franczak/RiderProjects/BlackJack/GameTests/bin/Debug/netcoreapp2.2/NUnit3.TestAdapter.pdb
+/Users/helena.franczak/RiderProjects/BlackJack/GameTests/bin/Debug/netcoreapp2.2/nunit.engine.netstandard.dll
+/Users/helena.franczak/RiderProjects/BlackJack/GameTests/bin/Debug/netcoreapp2.2/GameTests.deps.json
+/Users/helena.franczak/RiderProjects/BlackJack/GameTests/bin/Debug/netcoreapp2.2/GameTests.runtimeconfig.json
+/Users/helena.franczak/RiderProjects/BlackJack/GameTests/bin/Debug/netcoreapp2.2/GameTests.runtimeconfig.dev.json
+/Users/helena.franczak/RiderProjects/BlackJack/GameTests/bin/Debug/netcoreapp2.2/GameTests.dll
+/Users/helena.franczak/RiderProjects/BlackJack/GameTests/bin/Debug/netcoreapp2.2/GameTests.pdb
+/Users/helena.franczak/RiderProjects/BlackJack/GameTests/bin/Debug/netcoreapp2.2/BlackJack.dll
+/Users/helena.franczak/RiderProjects/BlackJack/GameTests/bin/Debug/netcoreapp2.2/BlackJack.pdb
+/Users/helena.franczak/RiderProjects/BlackJack/GameTests/obj/Debug/netcoreapp2.2/GameTests.csprojAssemblyReference.cache
+/Users/helena.franczak/RiderProjects/BlackJack/GameTests/obj/Debug/netcoreapp2.2/GameTests.csproj.CoreCompileInputs.cache
+/Users/helena.franczak/RiderProjects/BlackJack/GameTests/obj/Debug/netcoreapp2.2/GameTests.AssemblyInfoInputs.cache
+/Users/helena.franczak/RiderProjects/BlackJack/GameTests/obj/Debug/netcoreapp2.2/GameTests.AssemblyInfo.cs
+/Users/helena.franczak/RiderProjects/BlackJack/GameTests/obj/Debug/netcoreapp2.2/GameTests.csproj.CopyComplete
+/Users/helena.franczak/RiderProjects/BlackJack/GameTests/obj/Debug/netcoreapp2.2/GameTests.dll
+/Users/helena.franczak/RiderProjects/BlackJack/GameTests/obj/Debug/netcoreapp2.2/GameTests.pdb

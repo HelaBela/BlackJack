@@ -17,11 +17,12 @@
           <e p="Suit.cs" t="Include" />
         </e>
         <e p="ConsoleOperations" t="Include">
+          <e p="ConsoleOperations.cs" t="Include" />
           <e p="IConsoleOperations.cs" t="Include" />
         </e>
-        <e p="ConsoleOperations.cs" t="Include" />
         <e p="Dealer.cs" t="Include" />
         <e p="Game.cs" t="Include" />
+        <e p="IPlayer.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp2.2" t="Include">
@@ -29,18 +30,19 @@
             </e>
           </e>
         </e>
-        <e p="Player.cs" t="Include" />
+        <e p="PlayerComputer.cs" t="Include" />
+        <e p="PlayerHuman.cs" t="Include" />
         <e p="Program.cs" t="Include" />
       </e>
       <e p="BlackJack.sln" t="IncludeFlat" />
-      <e p="DealerTests" t="IncludeRecursive">
+      <e p="GameTests" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
-        <e p="DealerTests.csproj" t="IncludeRecursive" />
+        <e p="GameTests.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp2.2" t="Include">
-              <e p="DealerTests.AssemblyInfo.cs" t="Include" />
-              <e p="DealerTests.Program.cs" t="Include" />
+              <e p="GameTests.AssemblyInfo.cs" t="Include" />
+              <e p="GameTests.Program.cs" t="Include" />
             </e>
           </e>
         </e>

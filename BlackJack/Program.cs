@@ -10,23 +10,14 @@ namespace BlackJack
             
            
             var consoleOperations = new ConsoleOperations();
-            var player = new Player(consoleOperations);
-            var deck = new Deck();
-           
+            var playerHuman = new PlayerHuman(consoleOperations);
+            var playerComputer = new PlayerComputer(consoleOperations);
             
-            var game = new Game(player, consoleOperations, deck);
+            
+            var game = new Game(consoleOperations, playerHuman, playerComputer);
 
          game.Start();
-           
-       
-
-
-//            var playerHand = game.Play();
-//       
-//            foreach (var VARIABLE in playerHand)
-//            {
-//                Console.Write(VARIABLE);
-//            }
+         
 
         }
     }

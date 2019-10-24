@@ -28,7 +28,7 @@ namespace BlackJack
         }
 
 
-        public Card TakeCard()
+        public Card TakeOneCard()
         {
             var random = new Random().Next(0, 52);
             var card = Cards[random];
