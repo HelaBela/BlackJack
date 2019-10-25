@@ -33,7 +33,7 @@ namespace BlackJack
             if (humanScore == computerScore)
             {
                 _consoleOperations.Write("It's a tie.");
-                return "tie";
+                return "stay";
             }
             if (computerScore == 21 && computerScore != humanScore)
             {
@@ -42,7 +42,7 @@ namespace BlackJack
             }
 
             _consoleOperations.Write("Dealer is at burst ");
-            return "stay";
+            return "nothing";
             
 
         }

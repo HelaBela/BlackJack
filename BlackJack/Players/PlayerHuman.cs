@@ -20,10 +20,13 @@ namespace BlackJack
 
         public string HitOrStay(int score, int computerScore)
         {
-            if (_consoleOperations.Read() == "1") return "hit";
-            if (_consoleOperations.Read() == "0") return "stay";
-            else return "wrong";
+            while (true)
+            {
+                var answer = _consoleOperations.Read();
+                if (answer == "1") return "hit";
+                if (answer == "0") return "stay";
+                _consoleOperations.Write("Wrong choice. Hit = 1, Stay = 0");
+            }
         }
-        
     }
 }

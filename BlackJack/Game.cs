@@ -8,11 +8,15 @@ namespace BlackJack
     {
         public Deck _deck;
         private IConsoleOperations _consoleOperations;
+        
+        //List<PlayerHand> -> coz player ISet< associated with playerhand>
         private IPlayer Human;
+        private IPlayer Human2;
         private IPlayer Computer;
         private int humanScore;
         private int computerScore;
         public List<CardNumber> humanCardsAtHand;
+        public List<CardNumber> human2CardsAtHand;
         private List<CardNumber> computerCardsAtHand;
         private bool IsHumanPlaying;
 
@@ -61,7 +65,7 @@ namespace BlackJack
                 Computer.Play(computerScore);
                 var computerChoice = Computer.HitOrStay(humanScore, computerScore);
 
-                while (computerChoice != "stay")
+                while (computerChoice == "hit")
                 {
                     var nextCard = _deck.TakeOneCard();
                     _consoleOperations.Write(nextCard.CardNumber + " " + nextCard.Suit);
@@ -112,7 +116,7 @@ namespace BlackJack
                 }
                 else
                 {
-                    score += cardNumber.GetHashCode();
+                    score += (int) cardNumber;
                 }
             }
 
@@ -130,7 +134,7 @@ namespace BlackJack
 
             if (humanScore > 21)
             {
-                _consoleOperations.Write("You are currently at burst.");
+                _consoleOperations.Write($"You are currently at burst. Your score is {humanScore}");
                 _consoleOperations.Write("Dealer wins! ");
                 return true;
             }
