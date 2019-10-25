@@ -6,140 +6,110 @@ namespace BlackJack
 {
     public class Game
     {
-        public Deck _deck;
-        private IConsoleOperations _consoleOperations;
-        
-        //List<PlayerHand> -> coz player ISet< associated with playerhand>
-        private IPlayer Human;
-        private IPlayer Human2;
-        private IPlayer Computer;
-        private int humanScore;
-        private int computerScore;
-        public List<CardNumber> humanCardsAtHand;
-        public List<CardNumber> human2CardsAtHand;
-        private List<CardNumber> computerCardsAtHand;
-        private bool IsHumanPlaying;
+        private readonly Deck _deck;
+        private readonly IConsoleOperations _consoleOperations;
 
+        private readonly PlayerHand _computer;
+        private readonly PlayerHand _human;
 
-        public Game(IConsoleOperations consoleOperations, IPlayer human, IPlayer computer)
+        //private List<PlayerHand> _players;
+
+        public Game(IConsoleOperations consoleOperations, IPlayer humanPlayer, IPlayer computerPlayer)
         {
             _deck = new Deck();
             _consoleOperations = consoleOperations;
-            Computer = computer;
-            Human = human;
-            humanCardsAtHand = new List<CardNumber>();
-            computerCardsAtHand = new List<CardNumber>();
+
+            // _players = new List<PlayerHand>();
+            // _players.Add(new PlayerHand(human, new Hand()));
+            //_players.Add(new PlayerHand(computer, new Hand()));
+
+
+            _human = new PlayerHand(humanPlayer, new Hand());
+            _computer = new PlayerHand(computerPlayer, new Hand());
         }
 
         public void Start()
         {
-            IsHumanPlaying = true;
-            ShowTwoCards();
+            var humanChoice = PlayerChoice(_human, true);
 
-            humanScore = CalculateScore(humanCardsAtHand);
 
-            Human.Play(humanScore);
-
-            var humanChoice = Human.HitOrStay(humanScore, computerScore);
-
-            while (humanChoice != "stay" && humanChoice != "wrong" && !DidHumanBurstOrWin())
+            while (humanChoice == "hit")
             {
-                var nextCard = _deck.TakeOneCard();
-                _consoleOperations.Write(nextCard.CardNumber + " " + nextCard.Suit);
+                humanChoice = PlayerChoice(_human, false);
 
-                humanCardsAtHand.Add(nextCard.CardNumber);
-                humanScore = CalculateScore(humanCardsAtHand);
-                if (DidHumanBurstOrWin())
+                if (humanChoice == "burst")
                 {
                     break;
                 }
-                Human.Play(humanScore);
-                humanChoice = Human.HitOrStay(humanScore, computerScore);
             }
 
-            if (humanChoice == "stay" && !DidHumanBurstOrWin())
+            if (humanChoice == "stay")
             {
-                IsHumanPlaying = false;
-                ShowTwoCards();
-                computerScore = CalculateScore(computerCardsAtHand);
-                Computer.Play(computerScore);
-                var computerChoice = Computer.HitOrStay(humanScore, computerScore);
+                var computerChoice = PlayerChoice(_computer, true);
+
 
                 while (computerChoice == "hit")
                 {
-                    var nextCard = _deck.TakeOneCard();
-                    _consoleOperations.Write(nextCard.CardNumber + " " + nextCard.Suit);
-
-                    computerCardsAtHand.Add(nextCard.CardNumber);
-                    computerScore = CalculateScore(computerCardsAtHand);
-                    Computer.Play(computerScore);
-                    computerChoice = Computer.HitOrStay(humanScore, computerScore);
+                    computerChoice = PlayerChoice(_computer, false);
                 }
             }
 
-            else if (humanChoice == "wrong")
-            {
-                _consoleOperations.Write("Wrong choice. Hit = 1, Stay = 0");
-            }
+            FindPlayerWithHighestScore();
         }
 
-        private void ShowTwoCards()
+        private string PlayerChoice(PlayerHand playerHand, bool firstRound)
         {
-            var twoCards = _deck.TakeTwoCards();
-
-            foreach (var card in twoCards)
+            //refactor this method
+            if (firstRound)
             {
-                _consoleOperations.Write(card.CardNumber + " " + card.Suit);
+                var firstCard = _deck.TakeOneCard();
+                var secondCard = _deck.TakeOneCard();
 
-                if (!IsHumanPlaying)
-                {
-                    computerCardsAtHand.Add(card.CardNumber);
-                }
+                _consoleOperations.Write(
+                    $"{firstCard.CardNumber} {firstCard.Suit} {secondCard.CardNumber} {secondCard.Suit}");
 
-                humanCardsAtHand.Add(card.CardNumber);
+                playerHand.Hand.cardsAtHand.Add(firstCard.CardNumber);
+                playerHand.Hand.cardsAtHand.Add(secondCard.CardNumber);
             }
+            else
+            {
+                var nextCard = _deck.TakeOneCard();
+                _consoleOperations.Write(nextCard.CardNumber + " " + nextCard.Suit);
+                playerHand.Hand.cardsAtHand.Add(nextCard.CardNumber);
+            }
+
+            var score = playerHand.Hand.CalculateScore();
+
+            if (score < 21)
+            {
+                var playerChoice = playerHand.Player.HitOrStay(score);
+                return playerChoice;
+            }
+
+            if (score == 21)
+            {
+                return "stay";
+            }
+
+            _consoleOperations.Write($"You are at burst. Your score is {score}");
+
+            return "burst";
         }
 
-        private int CalculateScore(List<CardNumber> cardsAtHand)
+        private void FindPlayerWithHighestScore()
         {
-            var score = 0;
-            foreach (var cardNumber in cardsAtHand)
-            {
-                if (cardNumber == CardNumber.Ace)
-                {
-                    score += 11;
-                }
-                else if (cardNumber == CardNumber.Jack || cardNumber == CardNumber.Queen ||
-                         cardNumber == CardNumber.King)
-                {
-                    score += 10;
-                }
-                else
-                {
-                    score += (int) cardNumber;
-                }
-            }
-
-            return score;
-        }
-
-        private bool DidHumanBurstOrWin()
-        {
-            if (humanScore > computerScore && humanScore<21 && !IsHumanPlaying)
-            {
-                _consoleOperations.Write("You won! Woooohooooo ohhh yeah ");
-                return true;
-            }
+            var humanScore = _human.Hand.CalculateScore();
+            var computerScore = _computer.Hand.CalculateScore();
             
-
-            if (humanScore > 21)
+            if (humanScore > computerScore || computerScore > 21)
             {
-                _consoleOperations.Write($"You are currently at burst. Your score is {humanScore}");
-                _consoleOperations.Write("Dealer wins! ");
-                return true;
+                _consoleOperations.Write($"You won! Woooohooooo ohhh yeah {_human.Player.Name}");
             }
-            return false;
 
+            if (humanScore < computerScore && computerScore <= 21 || humanScore > 21)
+            {
+                _consoleOperations.Write($"{_computer.Player.Name} wins! ");
+            }
         }
     }
 }

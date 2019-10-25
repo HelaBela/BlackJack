@@ -12,14 +12,12 @@ namespace BlackJack
             _consoleOperations = consoleOperations;
         }
 
-        public void Play(int score)
+        public string Name => "Alex";
+
+        public string HitOrStay(int score)
         {
             _consoleOperations.Write($"your score is {score} Hit = 1, Stay = 0");
-        }
-
-
-        public string HitOrStay(int score, int computerScore)
-        {
+            
             while (true)
             {
                 var answer = _consoleOperations.Read();

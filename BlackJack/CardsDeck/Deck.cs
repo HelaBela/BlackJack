@@ -39,18 +39,5 @@ namespace BlackJack
 
             return card;
         }
-        
-        //take one card can be called twice
-
-        public List<Card> TakeTwoCards()
-        {
-            var random =  _randomChooser.RandomNumber(0, Cards.Count);
-            var random2 =  _randomChooser.RandomNumber(0, Cards.Count);
-            var takenCards = new List<Card>() {Cards[random], Cards[random2]};
-
-            Cards.RemoveAll(takenCards.Contains);
-
-            return takenCards;
-        }
     }
 }

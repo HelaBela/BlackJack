@@ -4,11 +4,7 @@ namespace BlackJack
 {
     public interface IPlayer
     {
-        void Play(int score);
-
-        string HitOrStay(int humanScore, int computerScore);
-       
-        
-
+        string Name { get; }
+        string HitOrStay(int score);
     }
 }

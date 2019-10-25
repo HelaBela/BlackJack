@@ -2,13 +2,13 @@ namespace BlackJack
 {
     public class PlayerHand
     {
-        private Hand _hand;
-        private IPlayer _player;
+        public Hand Hand;
+        public IPlayer Player;
 
         public PlayerHand(IPlayer player, Hand hand)
         {
-            _player = player;
-            _hand = hand;
+            Player = player;
+            Hand = hand;
         }
     }
 }

@@ -6,7 +6,7 @@ namespace BlackJack
     {
         public int RandomNumber(int min, int max)
         {
-            var number = new Random().Next(0, 52);
+            var number = new Random().Next(0, max);
 
             return number;
         }
