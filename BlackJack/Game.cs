@@ -7,32 +7,25 @@ namespace BlackJack
     public class Game
     {
         private readonly Deck _deck;
+
         private readonly IConsoleOperations _consoleOperations;
-        private readonly PlayerHand _human;
-
         private readonly PlayerHand _computer;
-        private List<PlayerHand> _humanPlayers;
+        private readonly List<PlayerHand> _humanPlayers;
 
-        public Game(IConsoleOperations consoleOperations, IPlayer humanPlayer, IPlayer humanPlayer2,
-            IPlayer computerPlayer)
+        public Game(IConsoleOperations consoleOperations, List<IPlayer> humanPlayers, IRandomChooser randomChooser)
         {
-            _deck = new Deck();
+            _deck = new Deck(randomChooser);
             _consoleOperations = consoleOperations;
-
-            _humanPlayers = new List<PlayerHand>();
-            _humanPlayers.Add(new PlayerHand(humanPlayer, new Hand()));
-            _humanPlayers.Add(new PlayerHand(humanPlayer2, new Hand()));
-
-
-            _computer = new PlayerHand(computerPlayer, new Hand());
-            _human = new PlayerHand(humanPlayer, new Hand());
+            _computer = new PlayerHand(new PlayerComputer((consoleOperations)));
+            _humanPlayers = humanPlayers.Select(s => new PlayerHand(s)).ToList();
         }
 
         public void Start()
         {
-            PlayUntilBustOrStay(_human);
+            PlayUntilBustOrStay(_humanPlayers);
 
-            if (IsThereABust(_human) == false)
+            var noHumanPlayerBusted = _humanPlayers.Any(player => !IsThereABust(player));
+            if (noHumanPlayerBusted)
             {
                 PlayUntilBustOrStay(_computer);
             }
@@ -40,72 +33,84 @@ namespace BlackJack
             FindTheWinner();
         }
 
-        private void PlayUntilBustOrStay(PlayerHand playerHand)
+        public int GetScoreFor(PlayerHuman player)
         {
-            SetUpInitialCards(playerHand);
-            var playerChoice = playerHand.Player.HitOrStay(playerHand.Hand.CalculateScore());
+            var playerHand = _humanPlayers.FirstOrDefault(pl => pl.GetName() == player.Name);
+            return playerHand.GetScore();
+        }
 
-            while (playerChoice == "hit" && IsThereABust(playerHand) == false)
+        private void PlayUntilBustOrStay(List<PlayerHand> playerHands)
+        {
+            foreach (var playerHand in playerHands)
             {
-                Play(playerHand);
-
-                if (IsThereABust(playerHand))
-                {
-                    _consoleOperations.Write($"{playerHand.Player.Name} lost.");
-                    _consoleOperations.Write("It's a bust!");
-                    break;
-                }
-
-                playerChoice = playerHand.Player.HitOrStay(playerHand.Hand.CalculateScore());
+                PlayUntilBustOrStay(playerHand);
             }
         }
 
-        private void SetUpInitialCards(PlayerHand playerHand)
+        private void PlayUntilBustOrStay(PlayerHand playerHand)
+        {
+            DealInitialCards(playerHand);
+            var playerChoice = playerHand.ChooseHitOrStay();
+
+            while (CanContinuePlay(playerHand, playerChoice))
+            {
+                ContinuePlay(playerHand);
+
+                if (IsThereABust(playerHand))
+                {
+                    playerHand.Communicate($"{playerHand.GetName()} lost.");
+                    playerHand.Communicate("It's a bust!");
+                    break;
+                }
+
+                playerChoice = playerHand.ChooseHitOrStay();
+            }
+        }
+
+        private bool CanContinuePlay(PlayerHand playerHand, string playerChoice)
+        {
+            return playerChoice == "hit" && !IsThereABust(playerHand);
+        }
+
+        private void DealInitialCards(PlayerHand playerHand)
         {
             var firstCard = _deck.TakeOneCard();
             var secondCard = _deck.TakeOneCard();
 
-            _consoleOperations.Write(
-                $"{firstCard.CardNumber} {firstCard.Suit} {secondCard.CardNumber} {secondCard.Suit}");
-
-            playerHand.Hand.cardsAtHand.Add(firstCard.CardNumber);
-            playerHand.Hand.cardsAtHand.Add(secondCard.CardNumber);
+            playerHand.DealCard(firstCard);
+            playerHand.DealCard(secondCard);
         }
 
-        private void Play(PlayerHand playerHand)
+        private void ContinuePlay(PlayerHand playerHand)
         {
             var nextCard = _deck.TakeOneCard();
-            _consoleOperations.Write(nextCard.CardNumber + " " + nextCard.Suit);
-            playerHand.Hand.cardsAtHand.Add(nextCard.CardNumber);
+            playerHand.DealCard(nextCard);
         }
 
 
         private void FindTheWinner()
         {
-            var humanScore = _human.Hand.CalculateScore();
-            var computerScore = _computer.Hand.CalculateScore();
+            var humanPlayers = _humanPlayers.Where(player => player.GetScore() < 22)
+                .OrderByDescending(player => player.GetScore());
+            var highestScoringHuman = humanPlayers.FirstOrDefault();
+            var computerScore = _computer.GetScore();
 
-            if (humanScore > computerScore && computerScore > 0 || computerScore > 21)
+
+            if (highestScoringHuman != null && (highestScoringHuman.GetScore() > computerScore && computerScore > 0 ||
+                                                computerScore > 21))
             {
-                _consoleOperations.Write($"You won! Woooohooooo ohhh yeah {_human.Player.Name}");
+                highestScoringHuman.Communicate($"You won! Woooohooooo ohhh yeah {highestScoringHuman.GetName()}");
             }
 
-            if (humanScore < computerScore && computerScore <= 21)
+            if (highestScoringHuman != null && (highestScoringHuman.GetScore() < computerScore && computerScore <= 21) || _humanPlayers.All(player => player.GetScore() > 22) )
             {
-                _consoleOperations.Write($"{_computer.Player.Name} wins! ");
+                _computer.Communicate($"{_computer.GetName()} wins!");
             }
         }
 
         private bool IsThereABust(PlayerHand playerHand)
         {
-            var score = playerHand.Hand.CalculateScore();
-
-            if (score > 21)
-            {
-                return true;
-            }
-
-            return false;
+            return playerHand.IsScoreGreaterThan(21);
         }
     }
 }

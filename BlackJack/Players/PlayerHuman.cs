@@ -5,19 +5,20 @@ namespace BlackJack
 {
     public class PlayerHuman : IPlayer
     {
-        public IConsoleOperations _consoleOperations;
+        private readonly IConsoleOperations _consoleOperations;
 
-        public PlayerHuman(IConsoleOperations consoleOperations)
+        public PlayerHuman(IConsoleOperations consoleOperations, string name)
         {
             _consoleOperations = consoleOperations;
+            Name = name;
         }
 
-        public string Name => "Alex";
+        public string Name { get; }
 
-        public string HitOrStay(int score)
+        public string ChooseHitOrStay(int score)
         {
             _consoleOperations.Write($"your score is {score} Hit = 1, Stay = 0");
-            
+
             while (true)
             {
                 var answer = _consoleOperations.Read();
@@ -25,6 +26,11 @@ namespace BlackJack
                 if (answer == "0") return "stay";
                 _consoleOperations.Write("Wrong choice. Hit = 1, Stay = 0");
             }
+        }
+
+        public void Communicate(string content)
+        {
+            _consoleOperations.Write(content);
         }
     }
 }

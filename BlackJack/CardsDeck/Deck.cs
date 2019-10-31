@@ -9,10 +9,10 @@ namespace BlackJack
         public List<Card> Cards { get; set; }
         private readonly IRandomChooser _randomChooser;
 
-        public Deck()
+        public Deck(IRandomChooser randomChooser)
         {
+            _randomChooser = randomChooser;
             Reset();
-            _randomChooser = new RandomChooser();
         }
 
         public void Reset()
@@ -33,7 +33,7 @@ namespace BlackJack
         public Card TakeOneCard()
         {
             var random = _randomChooser.RandomNumber(0, Cards.Count);
-            
+            Console.WriteLine($"AAAAAAAAA {random}");
             var card = Cards[random];
             Cards.Remove(card);
 

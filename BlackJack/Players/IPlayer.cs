@@ -5,6 +5,8 @@ namespace BlackJack
     public interface IPlayer
     {
         string Name { get; }
-        string HitOrStay(int score);
+        string ChooseHitOrStay(int score);
+
+        void Communicate(string content);
     }
 }

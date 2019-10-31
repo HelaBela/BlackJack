@@ -13,7 +13,7 @@ namespace BlackJack
 
         public string Name => "Dealer";
 
-        public string HitOrStay(int score)
+        public string ChooseHitOrStay(int score)
         {
             _consoleOperations.Write($"your score is {score} Hit = 1, Stay = 0");
 
@@ -23,6 +23,11 @@ namespace BlackJack
             }
 
             return "stay";
+        }
+
+        public void Communicate(string content)
+        {
+            _consoleOperations.Write(content);
         }
     }
 }

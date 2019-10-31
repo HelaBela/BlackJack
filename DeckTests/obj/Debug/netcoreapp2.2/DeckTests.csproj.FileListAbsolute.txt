@@ -1,0 +1,17 @@
+/Users/helena.franczak/RiderProjects/BlackJack/DeckTests/bin/Debug/netcoreapp2.2/NUnit3.TestAdapter.dll
+/Users/helena.franczak/RiderProjects/BlackJack/DeckTests/bin/Debug/netcoreapp2.2/NUnit3.TestAdapter.pdb
+/Users/helena.franczak/RiderProjects/BlackJack/DeckTests/bin/Debug/netcoreapp2.2/nunit.engine.netstandard.dll
+/Users/helena.franczak/RiderProjects/BlackJack/DeckTests/bin/Debug/netcoreapp2.2/DeckTests.deps.json
+/Users/helena.franczak/RiderProjects/BlackJack/DeckTests/bin/Debug/netcoreapp2.2/DeckTests.runtimeconfig.json
+/Users/helena.franczak/RiderProjects/BlackJack/DeckTests/bin/Debug/netcoreapp2.2/DeckTests.runtimeconfig.dev.json
+/Users/helena.franczak/RiderProjects/BlackJack/DeckTests/bin/Debug/netcoreapp2.2/DeckTests.dll
+/Users/helena.franczak/RiderProjects/BlackJack/DeckTests/bin/Debug/netcoreapp2.2/DeckTests.pdb
+/Users/helena.franczak/RiderProjects/BlackJack/DeckTests/bin/Debug/netcoreapp2.2/BlackJack.dll
+/Users/helena.franczak/RiderProjects/BlackJack/DeckTests/bin/Debug/netcoreapp2.2/BlackJack.pdb
+/Users/helena.franczak/RiderProjects/BlackJack/DeckTests/obj/Debug/netcoreapp2.2/DeckTests.csprojAssemblyReference.cache
+/Users/helena.franczak/RiderProjects/BlackJack/DeckTests/obj/Debug/netcoreapp2.2/DeckTests.csproj.CoreCompileInputs.cache
+/Users/helena.franczak/RiderProjects/BlackJack/DeckTests/obj/Debug/netcoreapp2.2/DeckTests.AssemblyInfoInputs.cache
+/Users/helena.franczak/RiderProjects/BlackJack/DeckTests/obj/Debug/netcoreapp2.2/DeckTests.AssemblyInfo.cs
+/Users/helena.franczak/RiderProjects/BlackJack/DeckTests/obj/Debug/netcoreapp2.2/DeckTests.csproj.CopyComplete
+/Users/helena.franczak/RiderProjects/BlackJack/DeckTests/obj/Debug/netcoreapp2.2/DeckTests.dll
+/Users/helena.franczak/RiderProjects/BlackJack/DeckTests/obj/Debug/netcoreapp2.2/DeckTests.pdb
